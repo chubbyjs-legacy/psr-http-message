@@ -1,6 +1,6 @@
 {
   "name": "@chubbyjs/psr-http-message",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common Http-message Interface (PHP FIG PSR-7).",
   "keywords": [
     "psr",

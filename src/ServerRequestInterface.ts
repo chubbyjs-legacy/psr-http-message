@@ -11,7 +11,7 @@ interface ServerRequestInterface extends RequestInterface {
     getParsedBody(): ParsedBody | undefined;
     withParsedBody(parsedBody: ParsedBody | undefined): ServerRequestInterface;
     getAttributes(): Map<string, unknown>;
-    getAttribute(name: string, defaultValue: unknown): unknown;
+    getAttribute(name: string, defaultValue?: unknown): unknown;
     withAttribute(name: string, value: unknown): ServerRequestInterface;
     withoutAttribute(name: string): ServerRequestInterface;
 }

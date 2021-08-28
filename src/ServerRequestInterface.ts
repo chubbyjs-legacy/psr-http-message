@@ -5,15 +5,15 @@ export type ParsedBody = Map<string, ParsedBody> | Array<ParsedBody> | string | 
 
 interface ServerRequestInterface extends RequestInterface {
     getCookieParams(): Map<string, string>;
-    withCookieParams(cookieParams: Map<string, string>): ServerRequestInterface;
+    withCookieParams(cookieParams: Map<string, string>): this;
     getQueryParams(): QueryParams;
-    withQueryParams(queryParams: QueryParams): ServerRequestInterface;
+    withQueryParams(queryParams: QueryParams): this;
     getParsedBody(): ParsedBody | undefined;
-    withParsedBody(parsedBody: ParsedBody | undefined): ServerRequestInterface;
+    withParsedBody(parsedBody: ParsedBody | undefined): this;
     getAttributes(): Map<string, unknown>;
     getAttribute(name: string, defaultValue?: unknown): unknown;
-    withAttribute(name: string, value: unknown): ServerRequestInterface;
-    withoutAttribute(name: string): ServerRequestInterface;
+    withAttribute(name: string, value: unknown): this;
+    withoutAttribute(name: string): this;
 }
 
 export default ServerRequestInterface;

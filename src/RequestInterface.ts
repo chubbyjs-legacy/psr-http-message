@@ -3,11 +3,11 @@ import UriInterface from './UriInterface';
 
 interface RequestInterface extends MessageInterface {
     getRequestTarget(): string;
-    withRequestTarget(requestTarget: string): RequestInterface;
+    withRequestTarget(requestTarget: string): this;
     getMethod(): string;
-    withMethod(name: string): RequestInterface;
+    withMethod(name: string): this;
     getUri(): UriInterface;
-    withUri(uri: UriInterface, preserveHost?: boolean): RequestInterface;
+    withUri(uri: UriInterface, preserveHost?: boolean): this;
 }
 
 export default RequestInterface;

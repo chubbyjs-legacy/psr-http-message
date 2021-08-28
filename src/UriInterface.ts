@@ -7,13 +7,13 @@ interface UriInterface {
     getPath(): string;
     getQuery(): string;
     getFragment(): string;
-    withScheme(scheme: string): UriInterface;
-    withUserInfo(user: string, password?: string): UriInterface;
-    withHost(scheme: string): UriInterface;
-    withPort(port?: number): UriInterface;
-    withPath(scheme: string): UriInterface;
-    withQuery(scheme: string): UriInterface;
-    withFragment(scheme: string): UriInterface;
+    withScheme(scheme: string): this;
+    withUserInfo(user: string, password?: string): this;
+    withHost(scheme: string): this;
+    withPort(port?: number): this;
+    withPath(scheme: string): this;
+    withQuery(scheme: string): this;
+    withFragment(scheme: string): this;
     toString(): string;
 }
 

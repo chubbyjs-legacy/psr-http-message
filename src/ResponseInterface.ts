@@ -2,7 +2,7 @@ import MessageInterface from './MessageInterface';
 
 interface ResponseInterface extends MessageInterface {
     getStatusCode(): number;
-    withStatus(code: number, reasonPhrase?: string): ResponseInterface;
+    withStatus(code: number, reasonPhrase?: string): this;
     getReasonPhrase(): string;
 }
 

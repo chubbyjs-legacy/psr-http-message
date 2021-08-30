@@ -1,6 +1,6 @@
 import RequestInterface from './RequestInterface';
 
-export type QueryParams = Map<string, string | Array<string> | QueryParams>;
+export type QueryParams = Map<string, QueryParams> | Array<QueryParams> | string;
 export type ParsedBody = Map<string, ParsedBody> | Array<ParsedBody> | string | number | boolean | null;
 
 interface ServerRequestInterface extends RequestInterface {

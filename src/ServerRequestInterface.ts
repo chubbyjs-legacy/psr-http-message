@@ -1,13 +1,14 @@
 import RequestInterface from './RequestInterface';
 
-export type QueryParams = { [key: string]: QueryParams } | Array<QueryParams> | string;
+export type QueryParamsValue = { [key: string]: QueryParams } | Array<QueryParams> | string;
+export type QueryParams = { [key: string]: QueryParamsValue };
 export type ParsedBody = { [key: string]: ParsedBody } | Array<ParsedBody> | string | number | boolean | null;
 
 interface ServerRequestInterface extends RequestInterface {
     getCookieParams(): Map<string, string>;
     withCookieParams(cookieParams: Map<string, string>): this;
-    getQueryParams(): { [key: string]: QueryParams };
-    withQueryParams(queryParams: { [key: string]: QueryParams }): this;
+    getQueryParams(): QueryParams;
+    withQueryParams(queryParams: QueryParams): this;
     getParsedBody(): ParsedBody | undefined;
     withParsedBody(parsedBody: ParsedBody | undefined): this;
     getAttributes(): Map<string, unknown>;

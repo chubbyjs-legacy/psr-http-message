@@ -18,7 +18,7 @@ This are the differences to the PHP version:
 Through [NPM](https://www.npmjs.com) as [@chubbyjs/psr-http-message][1].
 
 ```sh
-npm i @chubbyjs/psr-http-message@1.1.0
+npm i @chubbyjs/psr-http-message@1.1.1
 ```
 
 ## Copyright

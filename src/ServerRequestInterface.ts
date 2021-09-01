@@ -6,8 +6,8 @@ export type ParsedBody = { [key: string]: ParsedBody } | Array<ParsedBody> | str
 interface ServerRequestInterface extends RequestInterface {
     getCookieParams(): Map<string, string>;
     withCookieParams(cookieParams: Map<string, string>): this;
-    getQueryParams(): QueryParams;
-    withQueryParams(queryParams: QueryParams): this;
+    getQueryParams(): { [key: string]: QueryParams };
+    withQueryParams(queryParams: { [key: string]: QueryParams }): this;
     getParsedBody(): ParsedBody | undefined;
     withParsedBody(parsedBody: ParsedBody | undefined): this;
     getAttributes(): Map<string, unknown>;

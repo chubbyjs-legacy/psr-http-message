@@ -16,7 +16,7 @@ export enum Method {
 interface RequestInterface extends MessageInterface {
     getRequestTarget(): string;
     withRequestTarget(requestTarget: string): this;
-    getMethod(): string;
+    getMethod(): Method;
     withMethod(name: Method): this;
     getUri(): UriInterface;
     withUri(uri: UriInterface, preserveHost?: boolean): this;
